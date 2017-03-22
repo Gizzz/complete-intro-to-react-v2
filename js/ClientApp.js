@@ -1,10 +1,9 @@
-/* global React ReactDOM */
+import React from 'react'
+import { render } from 'react-dom'
 
-var MyTitle = require('./MyTitle')
+import MyTitle from './MyTitle'
 
 var div = React.DOM.div
-var h1 = React.DOM.h1
-
 var MyTitleFact = React.createFactory(MyTitle)
 
 var MyFirstComponent = React.createClass({
@@ -19,4 +18,4 @@ var MyFirstComponent = React.createClass({
   }
 })
 
-ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'))
+render(React.createElement(MyFirstComponent), document.getElementById('app'))
