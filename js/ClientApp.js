@@ -1,21 +1,18 @@
 import React from 'react'
-import { render } from 'react-dom'
+import ReactDOM from 'react-dom'
 
 import MyTitle from './MyTitle'
 
-var div = React.DOM.div
-var MyTitleFact = React.createFactory(MyTitle)
-
-var MyFirstComponent = React.createClass({
+const MyFirstComponent = React.createClass({
   render () {
     return (
-      div(null,
-        MyTitleFact({ title: 'Props are great!', color: 'rebeccapurple' }),
-        MyTitleFact({ title: 'Use props everywhere!', color: 'mediumaquamarine' }),
-        MyTitleFact({ title: 'Props are the best!', color: 'peru' })
-      )
+      <div>
+        <MyTitle title='Props are great!' color='rebeccapurple' />
+        <MyTitle title='Use props everywhere!' color='mediumaquamarine' />
+        <MyTitle title='Props are the best!' color='peru' />
+      </div>
     )
   }
 })
 
-render(React.createElement(MyFirstComponent), document.getElementById('app'))
+ReactDOM.render(React.createElement(MyFirstComponent), document.getElementById('app'))
