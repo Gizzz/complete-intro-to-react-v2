@@ -9,7 +9,7 @@ const Search = React.createClass({
       searchTerm: ''
     }
   },
-  handleSearchTermChange(event) {
+  handleSearchTermChange (event) {
     this.setState({ searchTerm: event.target.value })
   },
   render () {
@@ -17,9 +17,9 @@ const Search = React.createClass({
       <div className='search'>
         <header>
           <h1>{this.state.searchTerm}</h1>
-          <input type='text' placeholder='Search' 
-            value={this.state.searchTerm} 
-            onChange={this.handleSearchTermChange} 
+          <input type='text' placeholder='Search'
+            value={this.state.searchTerm}
+            onChange={this.handleSearchTermChange}
           />
         </header>
         <div>
